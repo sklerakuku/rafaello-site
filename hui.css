@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap'); /*- Inconsolata*/
+::-webkit-scrollbar { /*только для Хрома*/
+    display: none;
+}
+
+html {
+    background-color: #1D1D1D;   
+    font-family: "Inconsolata", monospace;
+    overflow-X: hidden;
+    width: 100%;
+}
+
+
+
+nav.fix {
+    position: fixed; 
+}
+
+nav {
+    height: 43px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-weight: 400;
+    font-size: 24px;
+    text-decoration: none;
+    
+    padding-left: 9%;    
+}
+nav > ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+nav > ul > li{
+    float: left;
+    margin-left: 10px;
+}
+
+nav > ul > li > a{
+    text-decoration: none;
+    color: #777777;
+    transition: all 0.3s ease-out;
+}
+
+nav > ul > li:hover > a, nav > ul > li.active > a{
+    color: #8F00FF;
+}
+
+
+main{
+    margin-top: 20px;
+    margin-left: 9.5%;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    margin-bottom: 100px;
+    border-left: solid 4px #8F00FF;
+}
+
+#hello {
+    height: 1000px;
+    background: url("hello-background.png"), top, left;
+    background-size: 100%;
+}
+
+#hello > h1 {
+    font-weight: 500;
+    margin: 0; padding: 0;
+    font-size: 95px;
+    color: white;
+    padding-top: 234px;
+    text-align: left;
+    padding-left: 55px;
+}
+#hello > h1::after {
+    content: url("Ellipse.svg");
+    position: relative;
+    left: -161px;
+    bottom: 330px;
+}
+
+#hello > h1 > strong {
+    color: #20C20E;
+    font-weight: 600;
+    text-decoration: underline;
+    font-size: 128px;
+}
+
+.namestext {
+    color: #20C20E;
+    font-size: 40px;
+    font-weight: 400;
+}
+
+#works .namestext::before, #contacts .namestext::before, #about_me .namestext::before{
+    content: url("Ellipse.svg");
+    position: relative;
+    left: -44px;
+}
+
+#works .namestext, #contacts .namestext, #about_me .namestext {
+    
+    padding-left: 25px;
+}
+
+#works{
+    color: #20C20E;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25);
+}
+#work-block{
+    background: linear-gradient(to bottom, rgba(143, 0, 255, 0.036), rgba(0, 0, 0, 0) 30%),#1F1F1F;
+}
+
+
+.work {
+    display: inline-flex;
+    padding: 5% 10% 5% 5%; /* top | right | bottom | left */
+    flex-direction: column;
+    align-items: flex-start;
+    width: 70%;
+}
+
+.work > article {       /*.odd*/
+    display: flex;
+    flex-direction: row;    
+    gap: 2%;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.work > article > img {
+    /*width: 50%;*/
+    /*width: 500px;*/
+    height: fit-content;
+    width: min-content;
+}
+
+.work > article > div{
+   /* width: 604px;*/
+    width: 48%;
+    overflow-wrap: break-word;
+    height: auto;
+}
+
+.work.odd > article > div{
+    /*width: 604px;*/
+    
+    overflow-wrap: break-word;
+    text-align: right;
+    width: 48%;
+}
+
+.work > article > div > h2 {
+    margin: 0px; 
+    color: #20C20E;
+    font-size: 64px;
+    font-weight: 800;
+}
+.work > article > div > p {
+    margin: 0px; 
+    color: #989898;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 21px; 
+}
+.work > article > div > a { 
+    color: #8F00FF;
+    font-size: 32px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+h6 {
+    font-size: 20px;
+    font-weight: 300;
+    margin: 0; padding: 0;
+    margin-bottom: 29px;
+}
+
+
+#codeblock {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 10px;
+    color: #FFFFFF;
+    font-size: 32px;
+    font-weight: 400;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25);
+    width: 1438px;
+    background: #1F1F1F;
+    padding: 45px 45px 65px 45px;
+    width: 88%;
+}
+
+.code:hover {
+    background-color: #777777;
+}
+
+.code::before {
+    content: attr(data-nr);
+    color: #1787D1;
+}
+
+.code .dot {
+    color: #777777;
+    position: relative;
+    bottom: -2px;
+}
+.code .blue {
+    color: #1787D1;
+}
+.code .spruce {
+    color: #17D1A5;
+}
+.code .sky {
+    color: #96E6FF;
+}
+.code .sun {
+    color: #D1BF17;
+}
+.code .rose {
+    color: #DC8E7D;
+}
+.code .tree {
+    color: #559B57;
+}
+
+#contacts {
+    display: flex;
+    flex-direction: column;
+}
+
+#contact-block {
+    display: flex;
+    flex-direction: column;
+    background: #1F1F1F;
+    padding: 45px 45px 45px 45px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25);
+    color: #FFFFFF;
+    font-size: 32px;
+    font-weight: 400;
+    gap: 54px;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    gap: 2px;
+}
+
+.contact {
+    position: relative;
+    bottom: 15px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.cols {
+    display: flex;
+    flex-direction: row;
+    gap: 300px;
+}
+
+footer {
+    height: 110px; color: #8F00FF;
+}
+footer > hr {
+    border: 2.5px solid #1F1F1F;
+}
+
+footer > p {
+    margin-top: 40px; margin-left: 66px;
+}
